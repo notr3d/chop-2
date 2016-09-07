@@ -1,0 +1,123 @@
+.site-footer {
+	background: @dark-grey url(img/footer-bg.png);
+	color: @white;
+	&__wrapper {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		padding: 15px;
+		@media @d {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+	&__item {
+		&:not(:last-of-type) {
+			padding-bottom: 15px;
+		}
+		@media @d {
+			flex-basis: 330px;
+		}
+	}
+}
+
+.footer-nav {
+	background: @dark-grey;
+	box-shadow: rgba(0, 0, 0, 0.5) 0 5px 15px 0;
+	&__wrapper {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		padding: 15px 0;		
+		justify-content: space-between;
+		align-items: center;
+		@media @t {
+			flex-direction: row;
+		}
+	}
+	&__item {
+		color: #636366;
+		padding: 15px 0;		
+		&:hover {
+			color: @white;
+		}
+	}
+}
+
+.footer-address {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	&__item {		
+		margin-bottom: 15px;
+		background: url(img/footer-sprite.png) no-repeat;
+		padding-left: 30px;
+		&--tel {
+			background-position: 5px 5px;
+		}
+		&--email {
+			background-position: 5px -25px;
+		}
+		&--address {
+			background-position: 5px -55px;
+		}		
+		a {
+			color: @white;
+		}
+	}	
+}
+
+.copy {
+	color: #6e6e72;
+	text-align: center;
+	margin-top: auto;
+}
+
+.footer-callback {
+	&__header {
+		font-size: 14px;
+		margin: 0;
+		text-transform: uppercase;
+		font-weight: normal;
+		margin-bottom: 15px;
+	}
+	input, textarea {
+		background: #282829;
+		border-radius: 0;
+		color: @white;
+		width: 100%;
+		margin-bottom: 15px;
+		padding: 15px;
+		border: none;
+	}
+	textarea {
+		resize: vertical;
+	}
+	input {
+		@media @t {
+			width: 49.7%;
+		}
+		@media @d {
+			width: 49.3%;
+		}
+		&[type="submit"] {
+			margin-bottom: 0;
+			border: none;
+			background: @yellow;
+			text-transform: uppercase;
+			color: @black;
+			font-size: 14px;
+			width: auto;
+		}
+	}
+}

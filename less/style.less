@@ -1,0 +1,29 @@
+@import "vendor.less";
+@import "site-header.less";
+@import "site-footer.less";
+
+@m: ~ "(max-width: 767px)";
+@t: ~ "(min-width: 768px)";
+@d: ~ "(min-width: 1280px)";
+
+@black: #000;
+@white: #fff;
+@yellow: #f1dd00;
+@dark-grey: #181919;
+
+.lcw {
+	margin: 0 auto;		
+	@media @m {
+		width: 100%;
+	}
+	@media @t {
+		width: 768px;
+	}
+	@media @d {
+		width: 1280px;
+	}	
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+}
