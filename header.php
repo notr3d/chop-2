@@ -4,45 +4,50 @@
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&subset=cyrillic-ext" rel="stylesheet">
-
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/featherlight.css">
+<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/featherlight.gallery.css">
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div class="site">
+	<div class="top-panel">
+		<div class="top-panel__wrapper">
+			<div class="top-panel__item">
+				<a href="home" class="site-logo">
+					<div class="site-logo__title">Тулрегионохрана</div>
+					<div class="site-logo__subtitle">Частная охранная организация</div>
+				</a>
+			</div>
+			<div class="top-panel__item">
+				<div class="top-links">
+					<a href="" class="top-links__item">Узнать стоимость</a>
+					<a href="" class="top-links__item">Заказать звонок</a>
+				</div>
+			</div>
+			<div class="top-panel__item">
+				<div class="top-address">
+					<a href="tel:84872524451" class="top-address__tel">8 (487) 252-44-51</a>
+					<div class="top-address__note">Пн-пт с 9.00 до 18.00</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<header class="site-header">
-		<div class="top-panel">
-			<div class="top-panel__wrapper lcw">
-				<div class="top-panel__item">
-					<div class="site-logo">
-						<div class="site-logo__title">Тулрегионохрана</div>
-						<div class="site-logo__subtitle">Частная охранная организация</div>
-					</div>
-				</div>
-				<div class="top-panel__item">
-					<div class="top-links">
-						<a href="" class="top-links__item">Узнать стоимость</a>
-						<a href="" class="top-links__item">Заказать звонок</a>
-					</div>
-				</div>
-				<div class="top-panel__item">
-					<div class="top-address">
-						<div class="top-address__tel">8 (487) 252-44-51</div>
-						<div class="top-address__address">г. Тула, Веневское шоссе, д.4, корп. 5</div>
-					</div>
-				</div>
+		
+		<section class="main-slider">
+			<div class="main-slider__item">
+				<div class="main-slider__title">Региональная охрана</div>
+				<div class="main-slider__title">В тульской, Рязанской, Орловской и Липецкой областях</div>
 			</div>
-		</div>
-		<div class="header-nav">
-			<div class="header-nav__wrapper lcw">
-				<a href="<?php echo get_permalink( get_page_by_title('О компании')->ID ); ?>" class="header-nav__item">О компании</a>
-				<a href="<?php echo get_permalink( get_page_by_title('Услуги')->ID ); ?>" class="header-nav__item">Услуги</a>
-				<a href="<?php echo get_permalink( get_page_by_title('Документы')->ID ); ?>" class="header-nav__item">Документы</a>
-				<a href="<?php echo get_permalink( get_page_by_title('Цены')->ID ); ?>" class="header-nav__item">Цены</a>
-				<a href="<?php echo get_permalink( get_page_by_title('Клиенты')->ID ); ?>" class="header-nav__item">Клиенты</a>
-				<a href="<?php echo get_permalink( get_page_by_title('Вопрос-ответ')->ID ); ?>" class="header-nav__item">Вопрос-ответ</a>
-				<a href="<?php echo get_permalink( get_page_by_title('Контакты')->ID ); ?>" class="header-nav__item">Контакты</a>
-			</div>
-		</div>
+			<div class="main-slider__item">
+				<div class="main-slider__title">Региональная охрана 2</div>
+				<div class="main-slider__title">В тульской, Рязанской, Орловской и Липецкой областях</div>			
+		</section>
+		<?php wp_nav_menu(array(
+			'theme_location' => 'header-nav',
+			'menu_class' => 'header-nav'
+		)); ?>
 	</header>
 	<div class="site-content">

@@ -1,0 +1,145 @@
+.home {
+	.services {
+		.col-t-6 {
+			@media @t {
+				&:nth-child(2n-1) {
+					padding-right: 8px;
+				}
+				&:nth-child(2n) {
+					padding-left: 8px;
+				}
+			}
+		}
+		&__item {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;		
+			text-decoration: none;
+			align-items: center;			
+			margin-bottom: 16px;
+			position: relative;
+			color: @white;
+			transition: .3s;
+			overflow: hidden;
+			@media @m {
+				padding: 100px 0;
+			}
+			@media @t {
+				height: 237px;
+			}
+			@media @d {
+				height: 355px;
+			}
+			&:hover {
+				color: @yellow;
+				.services__bg {
+					transform: scale(1.1);
+					-webkit-filter: brightness(75%) grayscale(75%);
+				}
+			}
+		}
+		&__bg {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: -1;
+			transition: 1s;
+		}
+		&__img {
+			height: 50px;
+			width: 45px;
+			margin-bottom: 20px;
+		}
+		&__title {
+			margin: 0;
+			font-size: 30px;
+			text-transform: uppercase;
+			word-spacing: 1000px;
+			text-align: center;
+			line-height: 1.1;
+			letter-spacing: 1px;
+		}
+	}
+
+	.about {
+		margin: 30px 0;
+		.col-t-4 {
+			text-align: center;
+			@media @t {
+				text-align: right;
+			}
+		}
+		article {
+			p {
+				margin: 0;
+				margin-bottom: 15px;
+			}
+		}
+	}
+}
+
+.garanty {
+	background: #181919 url(img/footer-bg.png);	
+	color: #8c8c90;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	padding: 45px 0 30px;
+	h2 {
+		margin: 0;
+		margin-bottom: 45px;
+		color: @yellow;
+		font-size: 36px;
+	}
+	p {
+		margin: 0;
+		margin-bottom: 30px;
+	}
+	ul {
+		padding-left: 15px;
+		margin: 0;
+		list-style: none;
+		li {
+			background: #000;
+			padding-left: 30px;
+			background: url(img/home/t-small.png) no-repeat 0 5px;
+			background-size: 15px;
+			margin: 0;
+			margin-bottom: 15px;
+		}
+	}
+	@media @d {
+		&__wrapper {			
+			padding-left: 365px;
+			max-width: 1225px;
+		}
+	}
+}
+
+.clients {
+	margin-bottom: 60px;
+}
+
+.galery {
+	&__container {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@media @t {
+			flex-direction: row;
+			justify-content: space-around;
+		}
+	}
+	
+}
