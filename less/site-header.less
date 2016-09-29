@@ -2,10 +2,22 @@
 	position: fixed;
 	top: 0;
 	width: 100%;
-	z-index: -1;
+	z-index: -10;
+	&--home {		
+		& + .site-content {
+			margin-top: 600px;
+		}
+	}
 }
 
 .top-panel {	
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.4);
+	padding: 15px 0;
+	z-index: 20;
+	transition: .3s;
 	&__wrapper {
 		.lcw;
 		display: -webkit-flex;
@@ -31,6 +43,10 @@
 			}
 		}		
 	}
+	&.active {
+		padding: 5px 0;
+		background: @black;
+	}
 }
 
 .site-logo {
@@ -38,8 +54,9 @@
 	text-decoration: none;
 	text-transform: uppercase;
 	display: inline-block;
-	padding: 30px 0 20px 55px;
+	padding: 15px 0 15px 55px;
 	background: url(img/site-logo.png) no-repeat left center;
+	background-size: auto 80px;
 	transition: .3s;
 	&__title {
 		font-weight: bold;
@@ -111,7 +128,18 @@
 }
 
 .header-nav {
-	transform:translateY(50%);
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	transform: translateY(-50%);
+	&.active {
+		position: fixed;
+		width: 100%;
+		top: 119px;
+		background: @black;
+		z-index: 20;
+	}
 	ul {
 		.lcw;
 		list-style: none;
@@ -136,7 +164,7 @@
 		color: @white;
 		text-transform: uppercase;
 		text-decoration: none;
-		border: 1px solid @white;		
+		border: 1px solid @white;	
 		background: @black linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
 		@media @m {
 			margin-top: -1px;

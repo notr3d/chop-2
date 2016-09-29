@@ -34,20 +34,21 @@
 			</div>
 		</div>
 	</div>
-	<header class="site-header">
-		
+	<?php if (is_page($page = "home")): ?>
+	<header class="site-header site-header--home">		
 		<section class="main-slider">
 			<div class="main-slider__item">
 				<div class="main-slider__title">Региональная охрана</div>
-				<div class="main-slider__title">В тульской, Рязанской, Орловской и Липецкой областях</div>
+				<div class="main-slider__subtitle">В тульской, Рязанской, Орловской и Липецкой областях</div>
 			</div>
 			<div class="main-slider__item">
 				<div class="main-slider__title">Региональная охрана 2</div>
-				<div class="main-slider__title">В тульской, Рязанской, Орловской и Липецкой областях</div>			
+				<div class="main-slider__subtitle">В тульской, Рязанской, Орловской и Липецкой областях</div>			
 		</section>
-		<?php wp_nav_menu(array(
-			'theme_location' => 'header-nav',
-			'menu_class' => 'header-nav'
-		)); ?>
 	</header>
+	<?php endif; ?>
 	<div class="site-content">
+	<?php wp_nav_menu(array(
+		'theme_location' => 'header-nav',
+		'menu_class' => 'header-nav'
+	)); ?>

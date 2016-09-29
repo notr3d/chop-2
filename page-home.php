@@ -65,17 +65,71 @@
 				</div>
 				</div>
 		</section>
+		<section class="calc">
+			<div class="lcw">
+				<div class="cols">
+					<div class="col-t-8">
+						<div class="calc__bg"></div>
+					</div>
+					<div class="col-t-4">
+						<div class="calc__container">
+							<div class="calc__title">Онлайн заявка</div>
+							<div class="calc__body">
+								<div class="calc__item">
+									<div class="calc__subtitle">Услуга:</div>
+									<select name="service" id="service">
+										<option value="1">Охрана офиса</option>
+										<option value="2">Охрана не офиса</option>
+									</select>
+								</div>
+								<div class="calc__item">
+									<div>
+										<span class="calc__subtitle">Количество охранников:</span>
+										<input type="number">
+									</div>
+									<input type="range">
+								</div>
+								<div class="calc__item calc__item--time">
+									<div class="calc__subtitle">Режим несения службы:</div>
+									<label>
+										<input type="radio" name="time" checked>
+										<span>24/7</span>
+									</label>
+									<label>
+										<input type="radio" name="time">
+										<span>День</span>
+									</label>
+									<label>
+										<input type="radio" name="time">
+										<span>Ночь</span>
+									</label>								
+								</div>
+								<div class="calc__item">
+									<div class="calc__subtitle">Ориентировачная стоимость:</div>
+									<output>75 000 руб/мес.</output>
+								</div>
+								<div class="calc__item calc__item--order">
+									<div class="calc__order">Заказать охрану</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section class="garanty">
 			<div class="garanty__wrapper">
-				<h2>Мы гарантируем!</h2>
-				<p>Каждый наш сотрудник подвергается обязательным процедурам, необходимым для преодоления стрессовых ситуаций, исключающих неправомерное поведение. В их число входят:</p>
-				<ul>
-					<li>лицензирование деятельности сотрудника, что является неотъемлемой частью спокойствия за сохранность бизнеса;</li>
-					<li>процедура психологического профотбора и обследования, при подготовке и приемке объекта;</li>
-					<li>обязательное ежедневное медицинское освидетельствование, перед приемом поста;</li>
-					<li>обязательный инструктаж, непосредственно перед приемом поста;</li>
-					<li>еженедельные тренировочные мероприятия, для поддержания формы сотрудника охраны.</li>
-				</ul>
+				<div class="garanty__container">
+					<h2>Мы гарантируем!</h2>
+					<p>Каждый наш сотрудник подвергается обязательным процедурам, необходимым для преодоления стрессовых ситуаций, исключающих неправомерное поведение. В их число входят:</p>
+					<ul>
+						<li>лицензирование деятельности сотрудника, что является неотъемлемой частью спокойствия за сохранность бизнеса;</li>
+						<li>процедура психологического профотбора и обследования, при подготовке и приемке объекта;</li>
+						<li>обязательное ежедневное медицинское освидетельствование, перед приемом поста;</li>
+						<li>обязательный инструктаж, непосредственно перед приемом поста;</li>
+						<li>еженедельные тренировочные мероприятия, для поддержания формы сотрудника охраны.</li>
+					</ul>
+				</div>
 			</div>
 		</section>
 		<section class="galery" data-featherlight-gallery data-featherlight-filter=".galery__inner">

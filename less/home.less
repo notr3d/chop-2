@@ -86,12 +86,28 @@
 .garanty {
 	background: #181919 url(img/footer-bg.png);	
 	color: #8c8c90;
-	display: -webkit-flex;
-	display: -moz-flex;
-	display: -ms-flex;
-	display: -o-flex;
-	display: flex;
-	padding: 45px 0 30px;
+	&__wrapper {
+		.lcw;
+	}
+	&__container {
+		padding: 15px 0;
+		@media @d {
+			margin-left: 365px;			
+			padding: 45px 0 30px;
+			position: relative;
+			&::before {
+				content: '';
+				display: block;
+				width: 1200px;
+				height: 100%;
+				background: url(img/home/garanty.png) no-repeat right bottom;
+				background-size: cover;
+				position: absolute;
+				top: 0;
+				right: 55%;
+			}
+		}
+	}
 	h2 {
 		margin: 0;
 		margin-bottom: 45px;
@@ -115,12 +131,6 @@
 			margin-bottom: 15px;
 		}
 	}
-	@media @d {
-		&__wrapper {			
-			padding-left: 365px;
-			max-width: 1225px;
-		}
-	}
 }
 
 .clients {
@@ -140,6 +150,112 @@
 			flex-direction: row;
 			justify-content: space-around;
 		}
+	}	
+}
+
+.calc {
+	padding: 30px 0;
+	&__container {		
+		border: 1px solid @grey;
+		box-shadow: 5px 5px 15px 0 @grey;
 	}
-	
+	&__body {
+		padding: 30px;
+	}
+	&__bg {
+		background: url(img/home/calc.png) no-repeat center;
+		background-size: contain;
+   		height: 100%;
+	}
+	&__title {
+		background: @black;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: @white;
+		font-size: 24px;
+		padding: 15px;		
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+	&__subtitle {
+		font-size: 14px;
+		color: @grey;
+		margin-bottom: 8px;
+	}
+	&__item {
+		select {
+			width: 100%;
+		}
+		input {
+			&[type="number"] {
+				width: 40px;
+				border-radius: 0;
+				border: 1px solid @grey;
+				float: right;
+			}
+			&[type="range"] {
+				width: 100%;
+			}
+			
+		}
+		output {
+			font-size: 24px;
+			font-weight: bold;
+		}
+		&--time {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			.calc__subtitle {
+				flex-basis: 100%;
+			}			
+			label {
+				color: @grey;
+				cursor: pointer;
+			}
+			span {				
+				display: inline-block;
+				position: relative;
+				&::before {
+					content: '';
+					display: inline-block;
+					width: 12px;
+					height: 12px;
+					background: @grey;
+					border-radius: 50%;
+					box-shadow: inset 1px 1px 1px 0 darken(@grey, 20%);
+					margin-right: 10px;
+					transition: .3s;
+				}
+			}
+			input {
+				&[type="radio"] {
+					display: none;				
+					&:checked + span::before {
+						background: @yellow;
+					}
+				}
+			}
+		}
+		&--order{
+			text-align: center;
+		}
+	}
+	&__order {
+		display: inline-block;
+		font-size: 14px;
+		text-transform: uppercase;
+		padding: 15px;
+		background: @yellow;
+		font-weight: bold;
+		cursor: pointer;
+	}
 }
