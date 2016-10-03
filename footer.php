@@ -2,7 +2,8 @@
 	<footer class="site-footer">
 		<?php wp_nav_menu(array(
 			'theme_location' => 'header-nav',
-			'menu_class' => 'footer-nav'
+			'menu_class' => 'footer-nav',
+			'depth' => 1
 		)); ?>
 		<div class="site-footer__wrapper">
 			<div class="site-footer__item">

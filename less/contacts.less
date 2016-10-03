@@ -1,0 +1,87 @@
+.contacts {
+	&__wrapper {
+		.lcw;
+		position: relative;
+	}
+	&__container {
+		@media @d {
+			width: 310px;
+			padding: 30px 0;
+			@media @d {			
+				position: absolute;
+				top: 0;
+				left: 15px;
+				z-index: 1;
+			}
+		}
+	}
+	&__map {
+		height: 400px;
+		background: #eee;
+		@media @d {
+			height: 718px;
+		}
+	}
+	.address {
+		text-align: center;
+		background: @yellow;
+		padding: 30px;
+		&__item {
+			&:not(:last-child) {
+				margin-bottom: 30px;				
+			}
+		}
+		&__header {
+			font-size: 12px;
+			font-weight: bold;
+		}
+		&__text {
+			font-size: 14px;
+			a {
+				color: @black;
+			}
+		}
+	}
+	.callback {
+		background: @white;
+		padding: 30px;
+		&__header {
+			font-size: 18px;
+			margin-bottom: 30px;
+			font-weight: bold;			
+			text-align: center;
+		}
+		&__item {
+			text-align: center;
+			&:not(:last-child) {
+				margin-bottom: 15px;				
+			}
+			input, textarea {
+				font-size: 12px;
+				padding: 8px;
+				border-radius: 0;
+				background: #f3f4f6;
+				color: #adadb5;
+				width: 100%;					
+				display: block;
+				border: 1px solid #adadb5;
+			}
+			input {
+				&[type="submit"] {
+					display: inline-block;
+					background: @black;
+					color: @white;
+					text-transform: uppercase;
+					width: auto;
+					border-color: @black;
+					padding: 15px 35px;
+					font-size: 14px;
+					font-weight: bold;
+				}
+			}
+			textarea {
+				resize: none;
+			}
+		}
+	}
+}
