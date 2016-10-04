@@ -86,6 +86,121 @@ body {
 	}
 }
 
+article {
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		margin-bottom: 15px;
+		li {
+			padding-left: 30px;			
+			margin-bottom: 30px;
+			position: relative;
+			&:before {
+				content: '';
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				background: @yellow;
+				margin-right: 10px;
+			}
+		}
+		&.special {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-content: space-between;
+			height: 180px;
+			li {
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.page-heading {
+	height: 400px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: -10;
+	background: no-repeat center;
+	&--event {
+		background-image: url(img/heading/event.png);
+	}
+	&--services {
+		background-image: url(img/heading/services.jpg);
+	}
+	& + .site-content {
+		margin-top: 400px;
+	}
+}
+
+.callback {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	@media @t {
+		flex-direction: row;
+	}
+	&__header {
+		font-size: 14px;
+		line-height: 24px;
+		text-transform: uppercase;
+		text-align: center;
+		margin-bottom: 45px;
+		flex-basis: 100%;
+	}
+	&__button {
+		width: 270px;
+		height: 50px;
+		text-transform: uppercase;
+		font-weight: bold;
+		cursor: pointer;
+		color: @black;
+		text-decoration: none;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 15px;
+		&--tel {
+			background: @white;
+			border: 1px solid @black;			
+			font-size: 20px;
+			@media @d {
+				margin-right: 15px;
+			}
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 30px;
+				height: 30px;
+				background: url(img/order/tel.png) no-repeat center;
+				background-size: contain;
+				margin-right: 23px;
+			}
+		}
+		&--open {
+			background: @yellow;
+			font-size: 14px;
+		}
+	}
+}
+
 .order {
 	margin: 60px 0;
 	background: @light-grey;

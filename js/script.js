@@ -51,5 +51,5 @@ $(document).ready(function(){
 	headerNavButton.click(function(){
 		var headerNavList = $(this).next();
 		headerNavList.slideToggle();
-	})
+	});
 });

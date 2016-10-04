@@ -127,11 +127,11 @@
 					</div>
 					<div class="parnters__item">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/home/clients/5.jpg" alt="" class="clients__img">
-					</div>
-					
+					</div>					
 				</div>
 			</div>
-		</section>			
+		</section>
+			
 	</main>
 </div>
 <?php get_footer(); ?>

@@ -47,6 +47,13 @@
 		</section>
 	</header>
 	<?php endif; ?>
+	<?php if (is_page($page = "event")): ?>
+		<header class="page-heading page-heading--event"></header>
+	<?php endif; ?>
+	<?php if (is_page($page = "services")): ?>
+		<header class="page-heading page-heading--services"></header>
+	<?php endif; ?>
+	
 	<div class="site-content">
 	<?php wp_nav_menu(array(
 		'theme_location' => 'header-nav',

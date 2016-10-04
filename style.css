@@ -992,6 +992,11 @@ object {
   cursor: pointer;
   background: #000 linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
 }
+@media (min-width: 768px) {
+  .header-nav__button {
+    display: none;
+  }
+}
 .site-footer {
   background: #181919 url(img/footer-bg.png);
 }
@@ -1589,15 +1594,16 @@ object {
   cursor: pointer;
 }
 .services .service {
-  padding-top: 60px;
+  padding-top: 30px;
+  margin-top: -27px;
   background: #f1dd00;
 }
 @media (min-width: 768px) {
   .services .service .col-t-6:nth-child(odd) {
-    padding-right: 8px;
+    padding-right: 30px;
   }
   .services .service .col-t-6:nth-child(even) {
-    padding-left: 8px;
+    padding-left: 30px;
   }
 }
 .services .service .col-t-6:nth-child(2) .service__item {
@@ -1619,6 +1625,11 @@ object {
   margin-bottom: 30px;
   padding-left: 75px;
   background: url(img/services/service/1.png) no-repeat 0 10px;
+}
+@media (min-width: 1100px) {
+  .services .service__item {
+    margin-bottom: 60px;
+  }
 }
 .services .service__link {
   color: #000;
@@ -1740,24 +1751,24 @@ object {
 .contacts .address__text a {
   color: #000;
 }
-.contacts .callback {
+.contacts .contacts-callback {
   background: #fff;
   padding: 30px;
 }
-.contacts .callback__header {
+.contacts .contacts-callback__header {
   font-size: 18px;
   margin-bottom: 30px;
   font-weight: bold;
   text-align: center;
 }
-.contacts .callback__item {
+.contacts .contacts-callback__item {
   text-align: center;
 }
-.contacts .callback__item:not(:last-child) {
+.contacts .contacts-callback__item:not(:last-child) {
   margin-bottom: 15px;
 }
-.contacts .callback__item input,
-.contacts .callback__item textarea {
+.contacts .contacts-callback__item input,
+.contacts .contacts-callback__item textarea {
   font-size: 12px;
   padding: 8px;
   border-radius: 0;
@@ -1767,7 +1778,7 @@ object {
   display: block;
   border: 1px solid #adadb5;
 }
-.contacts .callback__item input[type="submit"] {
+.contacts .contacts-callback__item input[type="submit"] {
   display: inline-block;
   background: #000;
   color: #fff;
@@ -1778,7 +1789,7 @@ object {
   font-size: 14px;
   font-weight: bold;
 }
-.contacts .callback__item textarea {
+.contacts .contacts-callback__item textarea {
   resize: none;
 }
 body {
@@ -1847,6 +1858,120 @@ body {
   .col-t-8 {
     flex-basis: 66.666666%;
   }
+}
+article ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 15px;
+}
+article ul li {
+  padding-left: 30px;
+  margin-bottom: 30px;
+  position: relative;
+}
+article ul li:before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: #f1dd00;
+  margin-right: 10px;
+}
+article ul.special {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-between;
+  height: 180px;
+}
+article ul.special li {
+  font-weight: bold;
+}
+.page-heading {
+  height: 400px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -10;
+  background: no-repeat center;
+}
+.page-heading--event {
+  background-image: url(img/heading/event.png);
+}
+.page-heading--services {
+  background-image: url(img/heading/services.jpg);
+}
+.page-heading + .site-content {
+  margin-top: 400px;
+}
+.callback {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+  .callback {
+    flex-direction: row;
+  }
+}
+.callback__header {
+  font-size: 14px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 45px;
+  flex-basis: 100%;
+}
+.callback__button {
+  width: 270px;
+  height: 50px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  color: #000;
+  text-decoration: none;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.callback__button--tel {
+  background: #fff;
+  border: 1px solid #000;
+  font-size: 20px;
+}
+@media (min-width: 1100px) {
+  .callback__button--tel {
+    margin-right: 15px;
+  }
+}
+.callback__button--tel::before {
+  content: '';
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url(img/order/tel.png) no-repeat center;
+  background-size: contain;
+  margin-right: 23px;
+}
+.callback__button--open {
+  background: #f1dd00;
+  font-size: 14px;
 }
 .order {
   margin: 60px 0;

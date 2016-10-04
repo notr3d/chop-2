@@ -21,18 +21,18 @@
 						<div class="address__text">пн-пт с 9.00 до 18.00</div>
 					</div>				
 				</div>
-				<div class="callback">
-					<div class="callback__header">Обратная связь:</div>
-					<div class="callback__item">
+				<div class="contacts-callback">
+					<div class="contacts-callback__header">Обратная связь:</div>
+					<div class="contacts-callback__item">
 						<input type="text" placeholder="Ваше имя:">
 					</div>
-					<div class="callback__item">
+					<div class="contacts-callback__item">
 						<input type="email" placeholder="Ваш e-mail:">
 					</div>
-					<div class="callback__item">
+					<div class="contacts-callback__item">
 						<textarea placeholder="Сообщение:"></textarea>
 					</div>
-					<div class="callback__item">
+					<div class="contacts-callback__item">
 						<input type="submit" value="Отправить">
 					</div>					
 				</div>

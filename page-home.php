@@ -134,7 +134,7 @@
 		</section>
 		<section class="galery" data-featherlight-gallery data-featherlight-filter=".galery__inner">
 			<div class="galery__wrapper lcw">
-				<h2 class="section-header">Пример состава проекта КМД:</h2>
+				<h2 class="section-header">Отзывы:</h2>
 				<div class="galery__container">
 					<div class="galery__item">
 						<a class="galery__inner" href="<?php echo get_template_directory_uri(); ?>/img/galery/reviews/big/1.jpg">

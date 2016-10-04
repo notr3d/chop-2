@@ -1,14 +1,15 @@
 .services {
 	.service {
-		padding-top: 60px;
+		padding-top: 30px;
+   		 margin-top: -27px;
 		background: @yellow;
 		.col-t-6 {
 			@media @t {
 				&:nth-child(odd) {
-					padding-right: 8px;
+					padding-right: 30px;
 				}
 				&:nth-child(even) {
-					padding-left: 8px;
+					padding-left: 30px;
 				}				
 			}
 			&:nth-child(2) {
@@ -42,6 +43,9 @@
 			margin-bottom: 30px;
 			padding-left: 75px;
 			background: url(img/services/service/1.png) no-repeat 0 10px;
+			@media @d {
+				margin-bottom: 60px;
+			}
 		}
 		&__link {
 			color: @black;
