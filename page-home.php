@@ -78,29 +78,29 @@
 								<div class="calc__item">
 									<div class="calc__subtitle">Услуга:</div>
 									<select name="service" id="service">
-										<option value="1">Охрана офиса</option>
-										<option value="2">Охрана не офиса</option>
+										<option value="2500" selected>Охрана офиса</option>
+										<option value="5000">Охрана не офиса</option>
 									</select>
 								</div>
 								<div class="calc__item">
 									<div>
 										<span class="calc__subtitle">Количество охранников:</span>
-										<input type="number">
+										<input type="number" min="1" max="10" value="2">
 									</div>
-									<input type="range">
+									<input type="range" min="1" max="10" value="2">
 								</div>
 								<div class="calc__item calc__item--time">
 									<div class="calc__subtitle">Режим несения службы:</div>
 									<label>
-										<input type="radio" name="time" checked>
+										<input type="radio" name="time" value="2" checked>
 										<span>24/7</span>
 									</label>
 									<label>
-										<input type="radio" name="time">
+										<input type="radio" name="time" value="1">
 										<span>День</span>
 									</label>
 									<label>
-										<input type="radio" name="time">
+										<input type="radio" name="time" value="1.5">
 										<span>Ночь</span>
 									</label>								
 								</div>

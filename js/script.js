@@ -53,3 +53,43 @@ $(document).ready(function(){
 		headerNavList.slideToggle();
 	});
 });
+
+//calc
+
+var calcBody = $('.calc');
+
+var secTypeInput = calcBody.find('select');
+var secType = secTypeInput.val();
+secTypeInput.change(function(){
+	secType = $(this).val();
+	calc();
+});
+
+var secNumberInput = calcBody.find('input[type="number"]');
+var secNumberRange = calcBody.find('input[type="range"]');
+var secNumber = secNumberInput.val();
+secNumberInput.change(function(){
+	secNumber = $(this).val();
+	secNumberRange.val(secNumber);
+	calc();
+});
+secNumberRange.change(function(){
+	secNumber = $(this).val();
+	secNumberInput.val(secNumber);
+	calc();
+});
+
+var secTimeInput = calcBody.find('input[type="radio"]');
+var secTime = calcBody.find('input[type="radio"]:checked').val();
+secTimeInput.change(function(){
+	secTime = $(this).val();
+	calc();
+});
+
+var calc = function(){	
+	var res = (secType * secNumber * secTime) + ' руб/мес.';
+	var output = calcBody.find('output');
+	output.val(res);
+};	
+
+calc();
