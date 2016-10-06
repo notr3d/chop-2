@@ -47,11 +47,26 @@
 		</section>
 	</header>
 	<?php endif; ?>
+	<?php if (is_page($page = "services")): ?>
+		<header class="page-heading page-heading--services"></header>
+	<?php endif; ?>
 	<?php if (is_page($page = "event")): ?>
 		<header class="page-heading page-heading--event"></header>
 	<?php endif; ?>
-	<?php if (is_page($page = "services")): ?>
-		<header class="page-heading page-heading--services"></header>
+	<?php if (is_page($page = "estate")): ?>
+		<header class="page-heading page-heading--estate"></header>
+	<?php endif; ?>
+	<?php if (is_page($page = "institution")): ?>
+		<header class="page-heading page-heading--institution"></header>
+	<?php endif; ?>
+	<?php if (is_page($page = "legal")): ?>
+		<header class="page-heading page-heading--legal"></header>
+	<?php endif; ?>
+	<?php if (is_page($page = "property")): ?>
+		<header class="page-heading page-heading--property"></header>
+	<?php endif; ?>
+	<?php if (is_page($page = "systems")): ?>
+		<header class="page-heading page-heading--systems"></header>
 	<?php endif; ?>
 	
 	<div class="site-content">

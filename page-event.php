@@ -1,6 +1,11 @@
 <?php get_header(); ?>
 <div class="content-area">
-	<main class="site-main event">
+	<main class="site-main service service--event">
+		<?php wp_nav_menu(array(
+			'theme_location' => 'service-nav',
+			'container_class' => 'service-nav',
+			'menu_class' => 'service-nav__wrapper'
+		)); ?>
 		<div class="lcw">
 			<article>
 				<p>Каждый вид событий с участием большого количества граждан отличается своей спецификой и требует особого подхода в вопросе обеспечения безопасности. Например, спортивные соревнования часто сопровождаются массовыми стычками между фанатскими группировками. Охрана специальных мероприятий — деловых переговоров или встреч — подразумевает обеспечение сохранности конфиденциальной информации. В свою очередь, частные торжества выдвигают к службам безопасности повышенные требования к деликатности, позволяющей быстро погасить потенциальный конфликт между гостями.</p>
@@ -28,6 +33,19 @@
 				<p>Специалисты ЧОО «Тулрегионохрана» гарантируют спокойное проведение вашего мероприятия.</p>
 			</article>
 		</div>
+		<section class="order">
+			<div class="order__wrapper">
+				<div class="order__item">
+					<a href="tel:84872524451" class="order__button order__button--tel">8 (487) 252-44-51</a>
+				</div>
+				<div class="order__item order__item--big">
+					<div class="order__text">Если у Вас возникли вопросы, то уточните их<br>у наших менеджеров по телефону:</div>
+				</div>
+				<div class="order__item">
+					<div class="order__button order__button--open">Заказать звонок</div>
+				</div>
+			</div>
+		</section>
 		<section class="calc">
 			<div class="lcw">
 				<div class="cols">
@@ -79,20 +97,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
-		<section class="order">
-			<div class="order__wrapper">
-				<div class="order__item">
-					<a href="tel:84872524451" class="order__button order__button--tel">8 (487) 252-44-51</a>
-				</div>
-				<div class="order__item order__item--big">
-					<div class="order__text">Если у Вас возникли вопросы, то уточните их<br>у наших менеджеров по телефону:</div>
-				</div>
-				<div class="order__item">
-					<div class="order__button order__button--open">Заказать звонок</div>
-				</div>
-			</div>
-		</section>
+		</section>		
 	</main>
 </div>
 <?php get_footer(); ?>

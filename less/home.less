@@ -156,9 +156,24 @@
 
 .calc {
 	padding: 30px 0;
+	.col-t-8 {
+		display: none;
+		@media @d {
+			display: block;
+		}
+		&--visible {
+			display: block !important;
+		}
+	}
 	&__container {		
 		border: 1px solid @grey;
 		box-shadow: 5px 5px 15px 0 @grey;
+		@media @t {
+			margin-left: 30px;
+		}
+		@media @d {				
+			margin-left: 60px;
+		}
 	}
 	&__body {
 		padding: 30px;

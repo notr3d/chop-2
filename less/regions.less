@@ -1,0 +1,99 @@
+.regions {
+	.region {	
+		padding-top: 50px;
+		@media @d {
+			background: url(img/home/calc.png) no-repeat left center;			
+			text-align: right;
+		}
+		&__container {
+			display: inline-block;
+			font-weight: bold;
+			padding: 30px 0;
+			@media @d {
+				width: 355px;				
+				padding: 135px 0 175px;
+			}
+			h3 {
+				font-size: 24px;
+				text-transform: uppercase;
+				margin-bottom: 30px;
+			}
+			p {
+				font-size: 18px;
+				padding-bottom: 45px;
+				position: relative;
+				&::before {
+					content: '';
+					display: block;
+					width: 300px;
+					height: 10px;
+					background: #56c1ff;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+				}
+				&::after {
+					content: '';
+					display: block;
+					width: 200px;
+					height: 10px;
+					background: @black;
+					position: absolute;
+					bottom: 0;
+					right: 0;
+				}
+				
+			}
+		}
+	}
+	.reg {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		@media @t {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+		&__item {
+			margin-bottom: 30px;
+			text-align: center;
+			&:nth-child(2) {
+				.reg__img {
+					background-image: url(img/regions/2.png);
+				}
+			}
+			&:nth-child(3) {
+				.reg__img {
+					background-image: url(img/regions/3.png);
+				}
+			}
+			&:nth-child(4) {
+				.reg__img {
+					background-image: url(img/regions/4.png);
+				}
+			}
+			&:nth-child(5) {
+				.reg__img {
+					background-image: url(img/regions/5.png);
+				}
+			}	
+			@media @t {
+				flex-basis: 33%;
+			}
+			@media @d {
+				flex-basis: 20%;
+			}
+			
+		}
+		&__img {
+			height: 100px;
+			background: url(img/regions/1.png) no-repeat center;
+			background-size: contain;
+			margin-bottom: 10px;
+		}
+	}
+}

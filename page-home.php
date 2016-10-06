@@ -6,42 +6,42 @@
 				<h2 class="section-header">Услуги компании</h2>
 				<div class="cols">
 					<div class="col-t-6">
-						<a href="#" class="services__item">
+						<a href="property" class="services__item">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/bg/1.jpg" class="services__bg">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/img/1.png" class="services__img">
 							<h3 class="services__title">Охрана объектов</h3>
 						</a>
 					</div>
 					<div class="col-t-6">
-						<a href="#" class="services__item">
+						<a href="institution" class="services__item">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/bg/2.jpg" class="services__bg">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/img/2.png" class="services__img">
 							<h3 class="services__title">Охрана учреждений</h3>
 						</a>
 					</div>
 					<div class="col-t-6">
-						<a href="#" class="services__item">
+						<a href="estate" class="services__item">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/bg/3.jpg" class="services__bg">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/img/3.png" class="services__img">
 							<h3 class="services__title">Охрана недвижимости</h3>
 						</a>
 					</div>
 					<div class="col-t-6">
-						<a href="#" class="services__item">
+						<a href="event" class="services__item">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/bg/4.jpg" class="services__bg">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/img/4.png" class="services__img">
 							<h3 class="services__title">Охрана мероприятий</h3>
 						</a>
 					</div>
 					<div class="col-t-6">
-						<a href="#" class="services__item">
+						<a href="systems" class="services__item">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/bg/5.jpg" class="services__bg">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/img/5.png" class="services__img">
 							<h3 class="services__title">Системы безопастности</h3>
 						</a>
 					</div>
 					<div class="col-t-6">
-						<a href="#" class="services__item">
+						<a href="legal" class="services__item">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/bg/6.jpg" class="services__bg">
 							<img src="<?php echo get_template_directory_uri(); ?>/img/home/services/img/6.png" class="services__img">
 							<h3 class="services__title">Юридические услуги</h3>

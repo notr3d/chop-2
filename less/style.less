@@ -6,6 +6,7 @@
 @import "services.less";
 @import "about.less";
 @import "contacts.less";
+@import "regions.less";
 
 @m: ~ "(max-width: 767px)";
 @t: ~ "(min-width: 768px)";
@@ -18,13 +19,16 @@
 @grey: #828385;
 @light-grey: #e5e5e5;
 
+html {
+	background: @black;
+}
+
 body {
 	font-family: 'Open Sans', sans-serif;
 }
 
 .site-content {
 	margin-top: 141px;
-	padding-top: 27px;
 	position: relative;
 	z-index: 10;	
 }
@@ -110,13 +114,21 @@ article {
 			display: -moz-flex;
 			display: -ms-flex;
 			display: -o-flex;
-			display: flex;
+			display: flex;		
 			flex-direction: column;
-			flex-wrap: wrap;
-			align-content: space-between;
-			height: 180px;
+			@media @d {				
+				flex-wrap: wrap;
+				height: 180px;
+				&--big {
+					height: 240px;
+				}
+				&--bigger {
+					height: 300px;
+				}
+			}
 			li {
 				font-weight: bold;
+				width: 33%;
 			}
 		}
 	}
@@ -128,16 +140,33 @@ article {
 	top: 0;
 	width: 100%;
 	z-index: -10;
-	background: no-repeat center;
-	&--event {
-		background-image: url(img/heading/event.png);
+	background-repeat: repeat, no-repeat;
+	background-position: 0 0, center;
+	& + .site-content {
+		margin-top: 400px;
 	}
 	&--services {
 		background-image: url(img/heading/services.jpg);
 	}
-	& + .site-content {
-		margin-top: 400px;
+	&--event {
+		background-image: url(img/heading/bg.png), url(img/heading/event.jpg);
 	}
+	&--institution {
+		background-image: url(img/heading/bg.png), url(img/heading/institution.jpg);
+	}
+	&--legal {
+		background-image: url(img/heading/bg.png), url(img/heading/legal.jpg);
+	}
+	&--property {
+		background-image: url(img/heading/bg.png), url(img/heading/property.jpg);
+	}
+	&--systems {
+		background-image: url(img/heading/bg.png), url(img/heading/systems.jpg);
+	}
+	&--estate {
+		background-image: url(img/heading/bg.png), url(img/heading/estate.jpg);
+	}
+	
 }
 
 .callback {
@@ -278,13 +307,40 @@ article {
 				display: inline-block;
 				width: 30px;
 				height: 30px;
-				background: url(img/order/tel.png) no-repeat center;
+				background: url(img/tel.png) no-repeat center;
 				background-size: contain;
 				margin-right: 23px;
 			}
 		}
 		&--open {
 			background: @yellow;
+			font-size: 14px;
+		}
+	}
+}
+
+.service-nav {
+	background: @yellow;
+	padding: 27px 0 15px;
+	&__wrapper {
+		.lcw;
+		list-style: none;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-direction: column;
+		@media @t {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+	}
+	.menu-item {
+		margin-top: 15px;
+		a {
+			color: @black;
+			font-weight: bold;
 			font-size: 14px;
 		}
 	}
