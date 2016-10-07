@@ -25,18 +25,19 @@
 	.address {
 		text-align: center;
 		background: @yellow;
-		padding: 30px;
+		padding: 50px 30px;
 		&__item {
+			color: @black;
 			&:not(:last-child) {
-				margin-bottom: 30px;				
+				margin-bottom: 15px;				
 			}
 		}
 		&__header {
 			font-size: 12px;
-			font-weight: bold;
 		}
 		&__text {
-			font-size: 14px;
+			font-size: 14px;			
+			font-weight: bold;
 			a {
 				color: @black;
 			}
@@ -47,14 +48,16 @@
 		padding: 30px;
 		&__header {
 			font-size: 18px;
-			margin-bottom: 30px;
+			margin-bottom: 15px;
 			font-weight: bold;			
 			text-align: center;
+			color: @black;
 		}
 		&__item {
 			text-align: center;
-			&:not(:last-child) {
-				margin-bottom: 15px;				
+			margin-bottom: 15px;
+			&:last-child {
+				margin-top: 30px;
 			}
 			input, textarea {
 				font-size: 12px;

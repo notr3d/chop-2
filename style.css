@@ -755,11 +755,10 @@ object {
   padding-top: 60px;
 }
 .top-panel {
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   padding: 15px 0;
-  z-index: 20;
   transition: .3s;
   /*&.active {
 		padding: 5px 0;
@@ -817,7 +816,6 @@ object {
   display: inline-block;
   padding: 15px 0 15px 55px;
   background: url(img/site-logo.png) no-repeat left center;
-  background-size: auto 80px;
   transition: .3s;
 }
 .site-logo__title {
@@ -883,8 +881,7 @@ object {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background: url(img/tel.png) no-repeat center;
-  background-size: cover;
+  background: url(img/tel.png) no-repeat center top;
   margin-right: 15px;
   vertical-align: middle;
 }
@@ -1068,6 +1065,12 @@ object {
 @media (min-width: 1100px) {
   .site-footer__item:first-child {
     flex-basis: 33%;
+    padding-top: 12px;
+  }
+}
+@media (min-width: 1100px) {
+  .site-footer__item:nth-child(2) {
+    padding-top: 31px;
   }
 }
 .footer-address {
@@ -1084,6 +1087,7 @@ object {
   padding-left: 30px;
   background: url(img/footer-sprite.png) no-repeat 0 5px;
   background-size: 15px;
+  font-size: 14px;
   color: #fff;
 }
 .footer-address__item a {
@@ -1337,9 +1341,11 @@ object {
   border-radius: 50%;
   margin: 0 10px;
   transition: .3s;
+  opacity: .2;
 }
 .main-slider .owl-dot:hover {
   background: rgba(255, 255, 255, 0.4);
+  opacity: .6;
 }
 .main-slider .owl-dot.active {
   background: #fff;
@@ -1640,7 +1646,6 @@ object {
 }
 .services .service {
   padding-top: 30px;
-  margin-top: -27px;
   background: #f1dd00;
 }
 @media (min-width: 768px) {
@@ -1781,17 +1786,20 @@ object {
 .contacts .address {
   text-align: center;
   background: #f1dd00;
-  padding: 30px;
+  padding: 50px 30px;
+}
+.contacts .address__item {
+  color: #000;
 }
 .contacts .address__item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 .contacts .address__header {
   font-size: 12px;
-  font-weight: bold;
 }
 .contacts .address__text {
   font-size: 14px;
+  font-weight: bold;
 }
 .contacts .address__text a {
   color: #000;
@@ -1802,15 +1810,17 @@ object {
 }
 .contacts .contacts-callback__header {
   font-size: 18px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
   font-weight: bold;
   text-align: center;
+  color: #000;
 }
 .contacts .contacts-callback__item {
   text-align: center;
-}
-.contacts .contacts-callback__item:not(:last-child) {
   margin-bottom: 15px;
+}
+.contacts .contacts-callback__item:last-child {
+  margin-top: 30px;
 }
 .contacts .contacts-callback__item input,
 .contacts .contacts-callback__item textarea {
@@ -1939,6 +1949,7 @@ html {
 }
 body {
   font-family: 'Open Sans', sans-serif;
+  color: #000;
 }
 .site-content {
   margin-top: 141px;
@@ -2059,7 +2070,7 @@ article ul.special li {
   margin-top: 400px;
 }
 .page-heading--services {
-  background-image: url(img/heading/services.jpg);
+  background-image: url(img/heading/bg.png), url(img/heading/services.jpg);
 }
 .page-heading--event {
   background-image: url(img/heading/bg.png), url(img/heading/event.jpg);
@@ -2078,6 +2089,12 @@ article ul.special li {
 }
 .page-heading--estate {
   background-image: url(img/heading/bg.png), url(img/heading/estate.jpg);
+}
+.page-heading--about {
+  background-image: url(img/heading/bg.png), url(img/heading/about.jpg);
+}
+.page-heading--regions {
+  background-image: url(img/heading/bg.png), url(img/heading/regions.jpg);
 }
 .callback {
   display: -webkit-flex;

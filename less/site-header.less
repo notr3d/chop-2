@@ -12,13 +12,16 @@
 }
 
 .top-panel {	
-	position: absolute;
+	position: fixed;
 	top: 0;
 	width: 100%;
-	//background: rgba(0, 0, 0, 0.4);
 	padding: 15px 0;
-	z-index: 20;
 	transition: .3s;
+	//background: rgba(0, 0, 0, 0.4);
+	/*&.active {
+		padding: 5px 0;
+		background: @black;
+	}*/
 	&__wrapper {
 		.lcw;
 		display: -webkit-flex;
@@ -44,10 +47,6 @@
 			}
 		}		
 	}
-	/*&.active {
-		padding: 5px 0;
-		background: @black;
-	}*/
 }
 
 .site-logo {
@@ -57,7 +56,6 @@
 	display: inline-block;
 	padding: 15px 0 15px 55px;
 	background: url(img/site-logo.png) no-repeat left center;
-	background-size: auto 80px;
 	transition: .3s;
 	&__title {
 		font-weight: bold;
@@ -121,8 +119,7 @@
 			display: inline-block;
 			width: 30px;
 			height: 30px;
-			background: url(img/tel.png) no-repeat center;
-			background-size: cover;
+			background: url(img/tel.png) no-repeat center top;
 			margin-right: 15px;
 			vertical-align: middle;
 		}

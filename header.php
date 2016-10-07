@@ -39,7 +39,7 @@
 		<section class="main-slider">
 			<div class="main-slider__item main-slider__item--1">
 				<div class="main-slider__title">Региональная охрана</div>
-				<div class="main-slider__subtitle">В тульской, Рязанской, Орловской и Липецкой областях</div>
+				<div class="main-slider__subtitle">В Тульской, Рязанской, Орловской и Липецкой областях</div>
 			</div>
 			<div class="main-slider__item main-slider__item--2">
 				<div class="main-slider__title">Охрана мероприятий</div>
@@ -67,6 +67,12 @@
 	<?php endif; ?>
 	<?php if (is_page($page = "systems")): ?>
 		<header class="page-heading page-heading--systems"></header>
+	<?php endif; ?>
+	<?php if (is_page($page = "about")): ?>
+		<header class="page-heading page-heading--about"></header>
+	<?php endif; ?>
+	<?php if (is_page($page = "regions")): ?>
+		<header class="page-heading page-heading--regions"></header>
 	<?php endif; ?>
 	
 	<div class="site-content">
