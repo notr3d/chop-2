@@ -12,9 +12,19 @@
 					</article>
 				</div>
 				<div class="col-t-4">
-					<div class="licenses">
-
-					</div>
+					<section class="licenses" data-featherlight-gallery data-featherlight-filter=".licenses__item">
+						<div class="licenses__wrapper">
+							<div class="licenses__header">Лицензии</div>
+							<div class="licenses__container">
+								<a href="<?php echo get_template_directory_uri(); ?>/img/licenses/big/1.jpg" class="licenses__item">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/licenses/small/1.jpg" class="licenses__img">
+								</a>
+								<a href="<?php echo get_template_directory_uri(); ?>/img/licenses/big/2.jpg" class="licenses__item">
+									<img src="<?php echo get_template_directory_uri(); ?>/img/licenses/small/2.jpg" class="licenses__img">
+								</a>								
+							</div>
+						</div>
+					</section>					
 				</div>
 			</div>
 			<div class="cols">
@@ -55,7 +65,48 @@
 						</div>						
 					</section>
 				</div>
-				<div class="col-t-4">					
+				<div class="col-t-4">
+					<div class="calc__container">
+						<div class="calc__title">Онлайн заявка</div>
+						<div class="calc__body">
+							<div class="calc__item">
+								<div class="calc__subtitle">Услуга:</div>
+								<select name="service" id="service">
+									<option value="2500" selected>Охрана офиса</option>
+									<option value="5000">Охрана не офиса</option>
+								</select>
+							</div>
+							<div class="calc__item">
+								<div>
+									<span class="calc__subtitle">Количество охранников:</span>
+									<input type="number" min="1" max="10" value="2">
+								</div>
+								<input type="range" min="1" max="10" value="2">
+							</div>
+							<div class="calc__item calc__item--time">
+								<div class="calc__subtitle">Режим несения службы:</div>
+								<label>
+									<input type="radio" name="time" value="2" checked>
+									<span>24/7</span>
+								</label>
+								<label>
+									<input type="radio" name="time" value="1">
+									<span>День</span>
+								</label>
+								<label>
+									<input type="radio" name="time" value="1.5">
+									<span>Ночь</span>
+								</label>								
+							</div>
+							<div class="calc__item">
+								<div class="calc__subtitle">Ориентировачная стоимость:</div>
+								<output>75 000 руб/мес.</output>
+							</div>
+							<div class="calc__item calc__item--order">
+								<div class="calc__order">Заказать охрану</div>
+							</div>
+						</div>
+					</div>
 				</div>				
 			</div>
 		</div>

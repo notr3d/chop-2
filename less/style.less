@@ -135,6 +135,73 @@ article {
 	}
 }
 
+.table {
+	margin-bottom: 16px;
+	font-size: 14px;
+	&__note {
+		font-size: 12px;
+		font-style: italic;
+		a {
+			color: @black;
+			&[href^="tel:"] {
+				text-decoration: none;
+			}
+		}
+	}
+	thead {
+		th {
+			background: @black;
+			color: @white;
+			text-align: center;
+			padding: 8px 0 4px;
+			font-weight: normal;
+			&:not(:last-child) {
+				border-right: 1px solid @white;
+			}
+			&:first-child {
+				background: @yellow;
+				color: @black;
+				font-weight: bold;
+				text-transform: uppercase;
+				text-align: left;
+				padding-left: 36px;
+				width: 50%;
+			}
+			div {
+				&:first-child {
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	tbody {
+		text-align: center;
+		tr {
+			&:first-child {
+				td {
+					margin-top: 16px;
+				}
+			}
+			&:last-child {
+				td {
+					margin-bottom: 16px;
+				}
+			}			
+			&:nth-child(even) {
+				background: #f0f1f2;
+			}
+			td {				
+				padding: 8px 0 4px;
+				&:first-child {
+					padding-left: 36px;
+					text-align: left;
+					width: 50%;
+				}
+			}
+		}
+	}
+}
+
 .page-heading {
 	height: 400px;
 	position: fixed;
@@ -350,5 +417,64 @@ article {
 			font-weight: bold;
 			font-size: 14px;
 		}
+	}
+}
+
+.licenses {
+	margin: 67px 0 100px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	@media @t {
+		justify-content: flex-end;
+	}
+	&__wrapper {
+		width: 300px;
+		height: 400px;
+	}
+	&__header {
+		font-size: 24px;
+		background: @black;
+		color: @white;
+		text-align: center;
+		padding: 16px;
+		text-transform: uppercase;
+	}
+	&__container {
+		background: @yellow;
+		height: 400px;
+		position: relative;
+	}
+	&__item {
+		display: inline-block;
+		width: 150px;
+		//height: 200px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-top: -100px;
+		margin-left: -75px;
+		transition: .3s;
+		box-shadow: 5px 5px 15px 0 rgba(0, 0, 0, 0.3);
+		&:nth-child(1) {
+			transform: translate(-25%, -25%);	
+			z-index: 1;
+			&:hover {
+				transform: translate(-25%, -25%) scale(1.1);
+			}
+		}
+		&:nth-child(2) {
+			transform: translate(25%, 25%);
+			&:hover {
+				transform: translate(25%, 25%) scale(1.1);
+			}
+		}
+	}
+	&__img {
+		display: block;
+		width: 100%;
 	}
 }

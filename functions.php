@@ -144,8 +144,17 @@ require get_template_directory() . '/inc/jetpack.php';
 function register_menus() {
   register_nav_menus(
     array(
+	  'header-nav' => __( 'Header navigation' ),
 	  'service-nav' => __( 'Service navigation' )
     )
   );
 }
 add_action( 'init', 'register_menus' );
+
+//hide home
+
+function page_menu_args( $args ) {
+    $args['show_home'] = FALSE;
+    return $args;
+}
+add_filter( 'wp_page_menu_args', 'page_menu_args' );

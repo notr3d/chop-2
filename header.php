@@ -78,6 +78,6 @@
 	<div class="site-content">
 	<?php wp_nav_menu(array(
 		'theme_location' => 'header-nav',
-		'menu_class' => 'header-nav',
-		'depth' => 1
+		'container_class' => 'header-nav',
+		'menu_class' => 'header-nav__wrapper',
 	)); ?>

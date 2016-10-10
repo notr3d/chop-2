@@ -6,40 +6,40 @@
 				<h2 class="section-header">Услуги компании</h2>
 				<div class="cols">
 					<div class="col-t-6">
-						<div class="service__item">
-							<a href="property" class="service__link">Охрана объектов</a>
+						<a href="property" class="service__item">
+							<div class="service__header">Охрана объектов</div>
 							<div class="service__text">Заводы и производства, предприятия промышленности, строительные объекты, склады, стоянки и парковки, гаражные кооперативы, АЗС, строительные площадки</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-t-6">
-						<div class="service__item">
-							<a href="institution" class="service__link">Охрана учреждений</a>
+						<a href="institution" class="service__item">
+							<div class="service__header">Охрана учреждений</div>
 							<div class="service__text">Детские сады, аптеки, предприятия, государственные учреждения, рестораны, больницы, офисы, клубы, гостиницы, банки, школы, магазины и торговые центры</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-t-6">
-						<div class="service__item">
-							<a href="estate" class="service__link">Охрана недвижимости</a>
+						<a href="estate" class="service__item">
+							<div class="service__header">Охрана недвижимости</div>
 							<div class="service__text">Частная собственность, загородные дома, дачи, участки, коттеджи и коттеджные поселки, квартиры и жилые комплексы</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-t-6">
-						<div class="service__item">
-							<a href="event" class="service__link">Охрана мероприятий</a>
+						<a href="event" class="service__item">
+							<div class="service__header">Охрана мероприятий</div>
 							<div class="service__text">Организовываем безопасное проведение деловых и развлекательных массовых мероприятий.</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-t-6">
-						<div class="service__item">
-							<a href="systems" class="service__link">Системы безопасности</a>
+						<a href="systems" class="service__item">
+							<div class="service__header">Системы безопасности</div>
 							<div class="service__text">Организовываем безопасное проведение деловых и развлекательных массовых мероприятий.</div>
-						</div>
+						</a>
 					</div>
 					<div class="col-t-6">
-						<div class="service__item">
-							<a href="legal" class="service__link">Юридические услуги</a>
+						<a href="legal" class="service__item">
+							<div class="service__header">Юридические услуги</div>
 							<div class="service__text">Организовываем безопасное проведение деловых и развлекательных массовых мероприятий.</div>
-						</div>
+						</a>
 					</div>					
 				</div>
 			</div>

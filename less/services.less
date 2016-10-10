@@ -39,22 +39,27 @@
 			
 		}
 		&__item {
+			color: @black;
+			display: block;
 			margin-bottom: 30px;
 			padding-left: 75px;
+			text-decoration: none;
 			background: url(img/services/service/1.png) no-repeat 0 10px;
 			@media @d {
-				margin-bottom: 60px;
+				margin-bottom: 60px;				
+			}		
+			&:visited {
+				color: @black;
 			}
-		}
-		&__link {
-			color: @black;
-			font-size: 30px;
-			margin-bottom: 30px;
-			font-weight: bold;
-			text-decoration: none;
 			&:hover {
 				text-decoration: underline;
 			}
+		}
+		&__header {
+			font-size: 30px;
+			margin-bottom: 15px;
+			font-weight: bold;
+			text-decoration: none;
 		}
 		&__text {
 			font-size: 14px;
