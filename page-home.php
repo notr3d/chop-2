@@ -109,7 +109,7 @@
 									<output>75 000 руб/мес.</output>
 								</div>
 								<div class="calc__item calc__item--order">
-									<div class="calc__order">Заказать охрану</div>
+									<div class="calc__order  header-form__open--form">Заказать охрану</div>
 								</div>
 							</div>
 						</div>

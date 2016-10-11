@@ -855,6 +855,13 @@ object {
   font-size: 12px;
   text-decoration: none;
   margin: 0 0 15px 0;
+  transition: .3s;
+  cursor: pointer;
+}
+.top-links__item:hover {
+  background: #fff;
+  text-decoration: underline !important;
+  color: #000 !important;
 }
 .top-links__item:visited {
   color: #fff;
@@ -950,7 +957,6 @@ object {
 }
 .header-nav__wrapper .menu-item {
   flex-grow: 1;
-  flex-basis: 0;
 }
 .header-nav__wrapper .menu-item > a {
   display: block;
@@ -974,6 +980,18 @@ object {
     border-color: #000;
   }
 }
+.header-nav__wrapper .menu-item:last-child {
+  flex-basis: 208px;
+}
+.header-nav__wrapper .menu-item:last-child a {
+  padding-left: 47px;
+  background-image: url(img/calc.png), linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
+  background-repeat: no-repeat;
+  background-position: 75px 17px, 0 0;
+}
+.header-nav__wrapper .menu-item:last-child.current-menu-item a {
+  background-image: url(img/calc-alt.png), linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
+}
 .header-nav__wrapper .current-menu-item a {
   border-color: #f1dd00;
   background: #f1dd00 linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
@@ -989,6 +1007,124 @@ object {
   .header-nav__button {
     display: none;
   }
+}
+.header-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  display: none;
+}
+.header-form.active {
+  display: block;
+}
+.header-form--form .header-form__form {
+  width: 400px;
+}
+.header-form__form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  -webkit-font-smoothing: subpixel-antialiased;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 15px;
+}
+.header-form__header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.header-form__item {
+  margin-bottom: 15px;
+  text-align: center;
+}
+.header-form__item input {
+  border-radius: 0;
+}
+.header-form__item input:not([type="submit"]) {
+  display: block;
+  width: 100%;
+  padding: 15px;
+}
+.header-form__item input[type="submit"] {
+  background: #f1dd00;
+  font-size: 18px;
+  padding: 15px;
+}
+.header-form__item textarea {
+  border-radius: 0;
+  display: block;
+  padding: 15px;
+  resize: vertical;
+}
+.header-form__item--file label {
+  text-decoration: underline;
+  color: #adadb5;
+  cursor: pointer;
+  position: relative;
+}
+.header-form__item--file label input {
+  display: none !important;
+}
+.header-form__item--file label::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url(img/callback-file.png) no-repeat center;
+  background-size: contain;
+  margin-right: 7px;
+}
+.header-form__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 30px;
+  line-height: 30px;
+  font-weight: bold;
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+  text-align: center;
+  transition: .3s;
+}
+.header-form__close:hover {
+  background: #f1dd00;
+  color: #fff;
+}
+.header-form br {
+  display: none;
+}
+.header-form .ajax-loader {
+  display: none;
+}
+.header-form .wpcf7-not-valid {
+  border-color: red;
+}
+.header-form .wpcf7-not-valid-tip {
+  background: red;
+  font-size: 10px;
+  color: #fff;
+  padding: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+.header-form .wpcf7-response-output {
+  margin: 0;
+  margin-top: 15px;
+  border: none;
+  background: red;
+  font-size: 12px;
+  padding: 15px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+.header-form .wpcf7-response-output.wpcf7-mail-sent-ok {
+  background: #11a948;
 }
 .site-footer {
   background: #181919 url(img/footer-bg.png);
@@ -1138,13 +1274,45 @@ object {
   color: #636366;
   text-decoration: none;
 }
-.footer-callback {
+.footer-callback .wpcf7-form {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex;
   flex-wrap: wrap;
+}
+.footer-callback br {
+  display: none;
+}
+.footer-callback .ajax-loader {
+  display: none;
+}
+.footer-callback .wpcf7-not-valid {
+  border-color: red;
+}
+.footer-callback .wpcf7-not-valid-tip {
+  background: red;
+  font-size: 10px;
+  color: #fff;
+  padding: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+.footer-callback .wpcf7-response-output {
+  margin: 0;
+  border: none;
+  background: red;
+  font-size: 12px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  height: 0 !important;
+  overflow: hidden;
+  padding: 0;
+}
+.footer-callback .wpcf7-response-output.wpcf7-mail-sent-ok {
+  background: #11a948;
+  height: auto !important;
+  padding: 15px;
 }
 .footer-callback__header {
   font-size: 14px;
@@ -1177,6 +1345,7 @@ object {
 }
 .footer-callback__item textarea {
   resize: vertical;
+  height: 60px;
 }
 .footer-callback__item--left {
   padding-right: 8px;
@@ -1751,7 +1920,7 @@ object {
 @media (min-width: 1100px) {
   .contacts__container {
     width: 310px;
-    padding: 57px 0 30px;
+    padding: 50px 0 30px;
   }
 }
 @media (min-width: 1100px) and (min-width: 1100px) {
@@ -1774,7 +1943,7 @@ object {
 .contacts .address {
   text-align: center;
   background: #f1dd00;
-  padding: 50px 30px;
+  padding: 12px 30px;
 }
 .contacts .address__item {
   color: #000;
@@ -1794,7 +1963,7 @@ object {
 }
 .contacts .contacts-callback {
   background: #fff;
-  padding: 30px;
+  padding: 10px 30px;
 }
 .contacts .contacts-callback__header {
   font-size: 18px;
@@ -1834,6 +2003,36 @@ object {
 }
 .contacts .contacts-callback__item textarea {
   resize: none;
+  height: 60px;
+}
+.contacts .contacts-callback br {
+  display: none;
+}
+.contacts .contacts-callback .ajax-loader {
+  display: none;
+}
+.contacts .contacts-callback .wpcf7-not-valid {
+  border-color: red;
+}
+.contacts .contacts-callback .wpcf7-not-valid-tip {
+  background: red;
+  font-size: 10px;
+  color: #fff;
+  padding: 0 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+.contacts .contacts-callback .wpcf7-response-output {
+  margin: 0;
+  margin-top: 15px;
+  border: none;
+  background: red;
+  font-size: 12px;
+  padding: 15px;
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+.contacts .contacts-callback .wpcf7-response-output.wpcf7-mail-sent-ok {
+  background: #11a948;
 }
 .regions .region {
   padding-top: 50px;
@@ -1972,7 +2171,7 @@ body {
   text-align: center;
   font-weight: normal;
   text-transform: uppercase;
-  margin: 30px 0;
+  margin: 60px 0 30px;
 }
 .cols {
   display: -webkit-flex;

@@ -6,7 +6,7 @@
 	&__container {
 		@media @d {
 			width: 310px;
-			padding: 57px 0 30px;
+			padding: 50px 0 30px;
 			@media @d {			
 				position: absolute;
 				top: 0;
@@ -25,7 +25,7 @@
 	.address {
 		text-align: center;
 		background: @yellow;
-		padding: 50px 30px;
+		padding: 12px 30px;
 		&__item {
 			color: @black;
 			&:not(:last-child) {
@@ -45,7 +45,7 @@
 	}
 	.contacts-callback {
 		background: @white;
-		padding: 30px;
+		padding: 10px 30px;
 		&__header {
 			font-size: 18px;
 			margin-bottom: 15px;
@@ -84,6 +84,36 @@
 			}
 			textarea {
 				resize: none;
+				height: 60px;
+			}
+		}
+		br {
+			display: none;
+		}
+		.ajax-loader {
+			display: none;
+		}
+		.wpcf7-not-valid {
+			border-color: red;
+		}
+		.wpcf7-not-valid-tip {
+			background: red;
+			font-size: 10px;
+			color: @white;
+			padding: 0 10px;
+			font-family: 'Open Sans', sans-serif;
+		}
+		.wpcf7-response-output {
+			margin: 0;
+			margin-top: 15px;
+			border: none;
+			background: red;
+			font-size: 12px;
+			padding: 15px;
+			color: @white;
+			font-family: 'Open Sans', sans-serif;
+			&.wpcf7-mail-sent-ok {
+				background: #11a948;
 			}
 		}
 	}

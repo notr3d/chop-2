@@ -93,3 +93,30 @@ var calc = function(){
 };	
 
 calc();
+
+//header-callback
+var headerCallbackOpen = $('.header-form__open--callback');
+var headerCallback = $('.header-form--callback')
+var headerCallbackClose = headerCallback.find('.header-form__close');
+
+headerCallbackOpen.click(function(){
+	headerCallback.addClass('active');
+});
+
+headerCallbackClose.click(function(){
+	headerCallback.removeClass('active');
+});
+
+//header-form
+var headerFormOpen = $('.header-form__open--form');
+var headerForm = $('.header-form--form')
+var headerFormClose = headerForm.find('.header-form__close');
+
+headerFormOpen.click(function(){
+	headerForm.addClass('active');
+});
+
+headerFormClose.click(function(){
+	headerForm.removeClass('active');
+});
+

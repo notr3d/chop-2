@@ -22,8 +22,8 @@
 			</div>
 			<div class="top-panel__item">
 				<div class="top-links">
-					<a href="" class="top-links__item">Узнать стоимость</a>
-					<a href="" class="top-links__item">Заказать звонок</a>
+					<span class="top-links__item header-form__open--form">Написать письмо</span>
+					<span class="top-links__item header-form__open--callback">Заказать звонок</span>
 				</div>
 			</div>
 			<div class="top-panel__item">
@@ -34,6 +34,47 @@
 			</div>
 		</div>
 	</div>
+	<section class="header-form header-form--form">
+		<div class="header-form__form">
+			<div class="header-form__header">Написать письмо</div>
+			<?php echo do_shortcode( '[contact-form-7 title="header form"]' ); ?>
+			<!--<div class="header-form__item">
+				<input type="text" placeholder="Имя*">
+			</div>
+			<div class="header-form__item">
+				<input type="email" placeholder="E-mail*">
+			</div>			
+			<div class="header-form__item">
+				<input type="tel" placeholder="Телефон">
+			</div>
+			<div class="header-form__item">
+				<textarea placeholder="Сообщение..."></textarea>
+			</div>
+			<div class="header-form__item header-form__item--file">
+				<label><span>Прикрепить файл</span><input type="file"></label>
+			</div>			
+			<div class="header-form__item">
+				<input type="submit">
+			</div>-->
+			<div class="header-form__close">×</div>
+		</div>
+	</section>
+	<section class="header-form header-form--callback">
+		<div class="header-form__form">
+			<div class="header-form__header">Заказать звонок</div>
+			<?php echo do_shortcode( '[contact-form-7 title="header callback"]' ); ?>
+			<!--<div class="header-form__item">
+				<input type="text" placeholder="Имя*">
+			</div>
+			<div class="header-form__item">
+				<input type="tel" placeholder="Телефон*">
+			</div>
+			<div class="header-form__item">
+				<input type="submit">
+			</div>-->
+			<div class="header-form__close">×</div>
+		</div>
+	</section>
 	<?php if (is_page($page = "home")): ?>
 	<header class="site-header site-header--home">		
 		<section class="main-slider">

@@ -30,7 +30,8 @@
 			<div class="site-footer__item">
 				<div class="footer-callback">
 					<h2 class="footer-callback__header">Связаться с нами:</h2>
-					<div class="footer-callback__item footer-callback__item--left">
+					<?php echo do_shortcode( '[contact-form-7 title="footer form"]' ); ?>
+					<!--<div class="footer-callback__item footer-callback__item--left">
 						<input type="text" placeholder="Ваше имя*" required>
 					</div>
 					<div class="footer-callback__item footer-callback__item--right">
@@ -41,7 +42,7 @@
 					</div>
 					<div class="footer-callback__item footer-callback__item--left">
 						<input type="submit" value="Отправить">
-					</div>
+					</div>-->
 				</div>
 			</div>
 		</div>

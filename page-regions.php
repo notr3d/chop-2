@@ -40,7 +40,7 @@
 						<div class="callback">
 							<h2 class="callback__header">Если у Вас возникли вопросы, то уточните их<br>у наших менеджеров по телефону:</h2>
 							<a href="tel:84872524451" class="callback__button callback__button--tel">8 (487) 252-44-51</a>
-							<div class="callback__button callback__button--open">Заказать звонок</div>
+							<div class="callback__button callback__button--open header-form__open--callback">Заказать звонок</div>
 						</div>
 					</div>
 					<div class="col-t-4">
@@ -81,7 +81,7 @@
 									<output>75 000 руб/мес.</output>
 								</div>
 								<div class="calc__item calc__item--order">
-									<div class="calc__order">Заказать охрану</div>
+									<div class="calc__order header-form__open--form">Заказать охрану</div>
 								</div>
 							</div>
 						</div>

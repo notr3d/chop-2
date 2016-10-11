@@ -23,7 +23,8 @@
 				</div>
 				<div class="contacts-callback">
 					<div class="contacts-callback__header">Обратная связь:</div>
-					<div class="contacts-callback__item">
+					<?php echo do_shortcode( '[contact-form-7 title="contacts form"]' ); ?>
+					<!--<div class="contacts-callback__item">
 						<input type="text" placeholder="Ваше имя:">
 					</div>
 					<div class="contacts-callback__item">
@@ -34,7 +35,7 @@
 					</div>
 					<div class="contacts-callback__item">
 						<input type="submit" value="Отправить">
-					</div>					
+					</div>-->					
 				</div>
 			</div>
 		</div>
