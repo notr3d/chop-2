@@ -165,6 +165,12 @@
 		transform: translateY(0);
 		z-index: 20;
 	}
+	@media @m {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
 	&__wrapper {
 		list-style: none;
 		.lcw;
@@ -190,7 +196,7 @@
 				color: @white;
 				text-transform: uppercase;
 				text-decoration: none;
-				border: 1px solid @white;	
+				border: 1px solid @black;	
 				background: @black;
 				position: relative;
 				//transition: .3s;
@@ -216,7 +222,6 @@
 				@media @t {
 					text-align: center;
 					margin-left: -1px;
-					border-color: @black;
 				}
 				&:hover {
 					color: @yellow;
@@ -232,6 +237,10 @@
 					background-image: url(img/calc.png);
 					background-repeat: no-repeat;
 					background-position: 75px 17px;
+					@media @m {
+						padding-left: 45px;
+						background-position: 15px 17px;
+					}
 				}
 				&.current-menu-item {
 					a {
@@ -246,6 +255,9 @@
 				background: @yellow;
 				color: @black !important;
 			}
+		}
+		@media @m {
+			padding: 0;
 		}
 	}
 	&__button {
@@ -273,7 +285,10 @@
 	}
 	&--form {
 		.header-form__form {
-			width: 400px;
+			width: 300px;
+			@media @t {
+				width: 400px;
+			}
 		}
 	}
 	&__form {
