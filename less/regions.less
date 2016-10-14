@@ -31,6 +31,9 @@
 					position: absolute;
 					bottom: 0;
 					right: 0;
+					@media @m {
+						display: none;
+					}
 				}
 				&::after {
 					content: '';
@@ -41,9 +44,15 @@
 					position: absolute;
 					bottom: 0;
 					right: 0;
+					@media @m {
+						display: none;
+					}
 				}
 				
 			}
+		}
+		@media @m {
+			display: none;
 		}
 	}
 	.reg {

@@ -46,7 +46,7 @@ $(window).scroll(function(){
 });
 
 $(document).ready(function(){
-	headerNav.prepend('<div class="header-nav__button"></div>');
+	headerNav.prepend('<div class="header-nav__button">навигация</div>');
 	var headerNavButton = $('.header-nav__button');
 	headerNavButton.click(function(){
 		var headerNavList = $(this).next();

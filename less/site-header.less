@@ -7,7 +7,16 @@
 		& + .site-content {
 			margin-top: 600px;			
 			padding-top: 60px;
+			@media @m {
+				margin-top: 600px !important;
+			}
 		}
+	}
+}
+
+.site-content {
+	@media @m {
+		margin-top: 225px !important;
 	}
 }
 
@@ -265,6 +274,11 @@
 		height: 50px;
 		cursor: pointer;
 		background: @black linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
+		color: white;
+    	text-align: center;
+    	line-height: 50px;
+		font-size: 12px;
+		text-transform: uppercase;
 		@media @t {
 			display: none;
 		}

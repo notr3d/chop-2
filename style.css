@@ -754,6 +754,16 @@ object {
   margin-top: 600px;
   padding-top: 60px;
 }
+@media (max-width: 767px) {
+  .site-header--home + .site-content {
+    margin-top: 600px !important;
+  }
+}
+@media (max-width: 767px) {
+  .site-content {
+    margin-top: 225px !important;
+  }
+}
 .top-panel {
   position: fixed;
   top: 0;
@@ -1045,6 +1055,11 @@ object {
   height: 50px;
   cursor: pointer;
   background: #000 linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 @media (min-width: 768px) {
   .header-nav__button {
@@ -1459,6 +1474,11 @@ object {
   font-size: 48px;
   text-transform: uppercase;
 }
+@media (max-width: 767px) {
+  .main-slider__title {
+    font-size: 26px;
+  }
+}
 .main-slider__subtitle {
   color: #fff;
   font-size: 18px;
@@ -1569,7 +1589,8 @@ object {
 }
 @media (max-width: 767px) {
   .home .services__item {
-    padding: 100px 0;
+    padding: 15px 0;
+    background: #181919 url(img/footer-bg.png);
   }
 }
 @media (min-width: 768px) {
@@ -1582,18 +1603,20 @@ object {
     height: 350px;
   }
 }
-.home .services__item:hover {
-  color: #f1dd00;
-}
-.home .services__item:hover .services__bg {
-  transform: scale(1.1);
-  -webkit-filter: brightness(75%) grayscale(75%);
-}
-.home .services__item:hover .services__top {
-  transform: translateY(-100%);
-}
-.home .services__item:hover .services__bottom {
-  transform: translateY(-100%);
+@media (min-width: 768px) {
+  .home .services__item:hover {
+    color: #f1dd00;
+  }
+  .home .services__item:hover .services__bg {
+    transform: scale(1.1);
+    -webkit-filter: brightness(75%) grayscale(75%);
+  }
+  .home .services__item:hover .services__top {
+    transform: translateY(-100%);
+  }
+  .home .services__item:hover .services__bottom {
+    transform: translateY(-100%);
+  }
 }
 .home .services__bg {
   position: absolute;
@@ -1602,6 +1625,11 @@ object {
   width: 100%;
   z-index: -1;
   transition: 1s;
+}
+@media (max-width: 767px) {
+  .home .services__bg {
+    display: none;
+  }
 }
 .home .services__img {
   height: 48px;
@@ -1645,6 +1673,11 @@ object {
   justify-content: center;
   align-items: center;
   transition: .3s;
+}
+@media (max-width: 767px) {
+  .home .services__bottom {
+    position: static;
+  }
 }
 .home .services__text {
   margin-bottom: 5px;
@@ -1772,6 +1805,11 @@ object {
 }
 .calc {
   padding: 30px 0;
+}
+@media (min-width: 768px) {
+  .calc .cols {
+    justify-content: center;
+  }
 }
 .calc .col-t-8 {
   display: none;
@@ -2167,6 +2205,11 @@ object {
   bottom: 0;
   right: 0;
 }
+@media (max-width: 767px) {
+  .regions .region__container p::before {
+    display: none;
+  }
+}
 .regions .region__container p::after {
   content: '';
   display: block;
@@ -2176,6 +2219,16 @@ object {
   position: absolute;
   bottom: 0;
   right: 0;
+}
+@media (max-width: 767px) {
+  .regions .region__container p::after {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .regions .region {
+    display: none;
+  }
 }
 .regions .reg {
   display: -webkit-flex;
@@ -2227,6 +2280,11 @@ object {
 /* First we have to make transparent all the default elements of the range input. We use color:transparent to eliminate the default tick marks in IE. */
 .slider2column {
   margin: 25px 0 0;
+}
+@media (max-width: 767px) {
+  .slider2column td {
+    text-align: center;
+  }
 }
 input[type=range]::-ms-track {
   width: 100%;
@@ -2320,6 +2378,11 @@ input[type=range]::-ms-tooltip {
   left: 0;
   top: 0;
   overflow: visible;
+}
+@media (max-width: 767px) {
+  .slidershell {
+    display: inline-block;
+  }
 }
 /* .slidertrack is the visible track on which the user drags the thumb button. */
 .slidertrack {
@@ -2441,6 +2504,12 @@ body {
   background: url(img/header.png) no-repeat center;
   position: absolute;
   top: 5px;
+}
+@media (max-width: 767px) {
+  .section-header span::before,
+  .section-header span::after {
+    display: none;
+  }
 }
 .cols {
   display: -webkit-flex;

@@ -16,7 +16,8 @@
 			transition: .3s;
 			overflow: hidden;
 			@media @m {
-				padding: 100px 0;
+				padding: 15px 0;
+				background: #181919 url(img/footer-bg.png);
 			}
 			@media @t {
 				height: 237px;
@@ -25,16 +26,18 @@
 				height: 350px;
 			}
 			&:hover {
-				color: @yellow;
-				.services__bg {
-					transform: scale(1.1);
-					-webkit-filter: brightness(75%) grayscale(75%);
-				}
-				.services__top {
-					transform: translateY(-100%);
-				}
-				.services__bottom {
-					transform: translateY(-100%);
+				@media @t {
+					color: @yellow;
+					.services__bg {
+						transform: scale(1.1);
+						-webkit-filter: brightness(75%) grayscale(75%);
+					}
+					.services__top {
+						transform: translateY(-100%);
+					}
+					.services__bottom {
+						transform: translateY(-100%);
+					}
 				}				
 			}
 		}
@@ -45,6 +48,9 @@
 			width: 100%;
 			z-index: -1;
 			transition: 1s;
+			@media @m {
+				display: none;
+			}
 		}
 		&__img {
 			height: 48px;
@@ -88,6 +94,9 @@
 			justify-content: center;
 			align-items: center;
 			transition: .3s;
+			@media @m {
+				position: static;				
+			}
 		}
 		&__text {
 			margin-bottom: 5px;
@@ -201,6 +210,11 @@
 
 .calc {
 	padding: 30px 0;
+	.cols {
+		@media @t {
+			justify-content: center;
+		}
+	}
 	.col-t-8 {
 		display: none;
 		@media @d {
