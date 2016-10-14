@@ -5,7 +5,7 @@
 			<div class="cols">
 				<div class="col-t-8">
 					<article>
-						<h2 class="section-header">О компании</h2>
+						<h2 class="section-header"><span>О компании</span></h2>
 						<p>Физическая охрана является одной из важнейших составляющих организации и ведения бизнеса. При ведении любого вида деятельности, внешняя преступная составляющая, угрожающая делопроизводству, всегда держится на значительном уровне. При подсчете рисков и критериев опасности, важно ответственно подходить к вопросу обеспечения сохранности предприятия, и обращаться только к профессионалам данной отрасли.</p>
 						<p><bold>Частная охранная организация «Тулрегионохрана»</bold> осуществляет безопасность любых видов физической и юридической деятельности с 2002 года. Опыт, подкрепленный большим количеством предотвращенных чрезвычайных ситуаций, позволил сформировать видение необходимого персонального подхода к каждому клиенту.</p>
 						<p>Каждый сотрудник нашего охранного предприятия подвергается обязательным процедурам, необходимым для преодоления стрессовых ситуаций, исключающих неправомерное поведение.</p>
@@ -72,30 +72,47 @@
 							<div class="calc__item">
 								<div class="calc__subtitle">Услуга:</div>
 								<select name="service" id="service">
-									<option value="2500" selected>Охрана офиса</option>
-									<option value="5000">Охрана не офиса</option>
+									<option value="85" selected>Строящиеся объекты</option>
+									<option value="90">Складское помещение</option>
+									<option value="70">Автостоянка</option>
+									<option value="100">Магазин</option>
+									<option value="90">Частный дом</option>
+									<option value="80">ТЦ</option>
+									<option value="90">Офисное помещение</option>
+									<option value="80">Ресторан</option>
+									<option value="85">Гостиница</option>
+									<option value="100">Ювелирный магазин</option>
+									<option value="100">Бутик</option>
+									<option value="120">Банк</option>
+									<option value="100">Массовое мероприятие</option>
 								</select>
 							</div>
-							<div class="calc__item">
-								<div>
-									<span class="calc__subtitle">Количество охранников:</span>
-									<input type="number" min="1" max="10" value="2">
-								</div>
-								<input type="range" min="1" max="10" value="2">
+							<div class="calc__item">								
+								<span class="calc__subtitle">Количество охранников:</span>
+								<input type="number" min="1" max="20" value="2">
+								<table class="slider2column">
+								  <tr>
+									<td>
+									  <div class="slidershell" id="slidershell1">
+										<div class="sliderfill" id="sliderfill1"></div>
+										<div class="slidertrack" id="slidertrack1"></div>
+										<div class="sliderthumb" id="sliderthumb1"></div>
+										<div class="slidervalue" id="slidervalue1">2</div>
+										<input class="slider" id="slider1" type="range" min="1" max="20" value="2" oninput="showValue(value, 1, false);" onchange="showValue(value, 1, false);" />
+									  </div>
+									</td>
+								  </tr>
+								</table>
 							</div>
 							<div class="calc__item calc__item--time">
 								<div class="calc__subtitle">Режим несения службы:</div>
 								<label>
-									<input type="radio" name="time" value="2" checked>
-									<span>24/7</span>
+									<input type="radio" name="time" value="1" checked>
+									<span>До 12 часов</span>
 								</label>
 								<label>
-									<input type="radio" name="time" value="1">
-									<span>День</span>
-								</label>
-								<label>
-									<input type="radio" name="time" value="1.5">
-									<span>Ночь</span>
+									<input type="radio" name="time" value="0.75">
+									<span>До 24 часов</span>
 								</label>								
 							</div>
 							<div class="calc__item">
@@ -103,7 +120,7 @@
 								<output>75 000 руб/мес.</output>
 							</div>
 							<div class="calc__item calc__item--order">
-								<div class="calc__order header-form__open--form">Заказать охрану</div>
+								<div class="calc__order  header-form__open--form">Заказать охрану</div>
 							</div>
 						</div>
 					</div>
@@ -125,7 +142,7 @@
 		</section>
 		<section class="galery" data-featherlight-gallery data-featherlight-filter=".galery__inner">
 			<div class="galery__wrapper lcw">
-				<h2 class="section-header">Отзывы:</h2>
+				<h2 class="section-header"><span>Отзывы:</span></h2>
 				<div class="galery__container">
 					<div class="galery__item">
 						<a class="galery__inner" href="<?php echo get_template_directory_uri(); ?>/img/galery/reviews/big/1.jpg">
@@ -147,7 +164,7 @@
 		</section>
 		<section class="clients">
 			<div class="clients__wrapper lcw">
-				<h2 class="section-header">Наши клиенты</h2>
+				<h2 class="section-header"><span>Наши клиенты</span></h2>
 				<div class="clients__container">
 					<div class="parnters__item">
 						<img src="<?php echo get_template_directory_uri(); ?>/img/home/clients/1.jpg" alt="" class="clients__img">

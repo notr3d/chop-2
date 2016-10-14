@@ -3,9 +3,9 @@
 	<main class="site-main prices">		
 		<div class="lcw">
 			<article>
-				<h2 class="section-header">Цены на охрану</h2>
+				<h2 class="section-header"><span>Цены на охрану</span></h2>
 				<p>Наши расценки соответствуют объективным реалиям и условиям, диктуемым рынком. Цены на услуги нашего охранного предприятия напрямую зависят от ряда факторов: характера деятельности организации-заказчика, места расположения охраняемого объекта и уровня преступности, необходимого режима работы сотрудников, их физических и психологических нагрузок, необходимости в технических средствах защиты объекта.</p>
-				<p>Мы придерживаемся гибкой ценовой политики: при заказе нескольких постов охраны мы предоставляем хорошие скидки. Узнать подробнее о стоимости и текущих предложениях частного охранного предприятия "ОберегЪ"вы можете по телефону отдела продаж.</p>
+				<p>Мы придерживаемся гибкой ценовой политики: при заказе нескольких постов охраны мы предоставляем хорошие скидки. Узнать подробнее о стоимости и текущих предложениях частного охранного предприятия "Тулрегионохрана" вы можете по телефону отдела продаж.</p>
 				<div class="table__note">Стоимость указана за час работы одного поста охраны (1 охранник)</div>
 				<table class="table">					
 					<thead>
@@ -156,30 +156,47 @@
 								<div class="calc__item">
 									<div class="calc__subtitle">Услуга:</div>
 									<select name="service" id="service">
-										<option value="2500" selected>Охрана офиса</option>
-										<option value="5000">Охрана не офиса</option>
+										<option value="85" selected>Строящиеся объекты</option>
+										<option value="90">Складское помещение</option>
+										<option value="70">Автостоянка</option>
+										<option value="100">Магазин</option>
+										<option value="90">Частный дом</option>
+										<option value="80">ТЦ</option>
+										<option value="90">Офисное помещение</option>
+										<option value="80">Ресторан</option>
+										<option value="85">Гостиница</option>
+										<option value="100">Ювелирный магазин</option>
+										<option value="100">Бутик</option>
+										<option value="120">Банк</option>
+										<option value="100">Массовое мероприятие</option>
 									</select>
 								</div>
-								<div class="calc__item">
-									<div>
-										<span class="calc__subtitle">Количество охранников:</span>
-										<input type="number" min="1" max="10" value="2">
-									</div>
-									<input type="range" min="1" max="10" value="2">
+								<div class="calc__item">								
+									<span class="calc__subtitle">Количество охранников:</span>
+									<input type="number" min="1" max="20" value="2">	
+									<table class="slider2column">
+									  <tr>
+										<td>
+										  <div class="slidershell" id="slidershell1">
+											<div class="sliderfill" id="sliderfill1"></div>
+											<div class="slidertrack" id="slidertrack1"></div>
+											<div class="sliderthumb" id="sliderthumb1"></div>
+											<div class="slidervalue" id="slidervalue1">2</div>
+											<input class="slider" id="slider1" type="range" min="1" max="20" value="2" oninput="showValue(value, 1, false);" onchange="showValue(value, 1, false);" />
+										  </div>
+										</td>
+									  </tr>
+									</table>
 								</div>
 								<div class="calc__item calc__item--time">
 									<div class="calc__subtitle">Режим несения службы:</div>
 									<label>
-										<input type="radio" name="time" value="2" checked>
-										<span>24/7</span>
+										<input type="radio" name="time" value="1" checked>
+										<span>До 12 часов</span>
 									</label>
 									<label>
-										<input type="radio" name="time" value="1">
-										<span>День</span>
-									</label>
-									<label>
-										<input type="radio" name="time" value="1.5">
-										<span>Ночь</span>
+										<input type="radio" name="time" value="0.75">
+										<span>До 24 часов</span>
 									</label>								
 								</div>
 								<div class="calc__item">
@@ -187,7 +204,7 @@
 									<output>75 000 руб/мес.</output>
 								</div>
 								<div class="calc__item calc__item--order">
-									<div class="calc__order header-form__open--form">Заказать охрану</div>
+									<div class="calc__order  header-form__open--form">Заказать охрану</div>
 								</div>
 							</div>
 						</div>

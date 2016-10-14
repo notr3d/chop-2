@@ -1,4 +1,5 @@
 	</div>
+	<div class="scrollup"></div>
 	<footer class="site-footer">
 		<?php wp_nav_menu(array(
 			'theme_location' => 'header-nav',
@@ -15,7 +16,7 @@
 			<div class="site-footer__item">
 				<div class="footer-address">
 					<div class="footer-address__item footer-address__item--tel">
-						<a href="tel:84872524451">8 (487) 252-44-51</a>
+						<a href="tel:84872524451">8 (4872) 52-44-51</a>
 					</div>
 					<div class="footer-address__item footer-address__item--email">
 						<a href="mailto:info@regionchop.ru">info@regionchop.ru</a>
@@ -53,6 +54,45 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/featherlight.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/featherlight.gallery.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/js/script.js"></script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+	(function (d, w, c) {
+		(w[c] = w[c] || []).push(function() {
+			try {
+				w.yaCounter39095985 = new Ya.Metrika({
+					id:39095985,
+					clickmap:true,
+					trackLinks:true,
+					accurateTrackBounce:true,
+					webvisor:true
+				});
+			} catch(e) { }
+		});
+
+		var n = d.getElementsByTagName("script")[0],
+			s = d.createElement("script"),
+			f = function () { n.parentNode.insertBefore(s, n); };
+		s.type = "text/javascript";
+		s.async = true;
+		s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+		if (w.opera == "[object Opera]") {
+			d.addEventListener("DOMContentLoaded", f, false);
+		} else { f(); }
+	})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/39095985" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->	
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-82670039-1', 'auto');
+	ga('send', 'pageview');
+</script>
 <?php wp_footer(); ?>
 </body>
 </html>

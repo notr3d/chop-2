@@ -7,6 +7,12 @@
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/owl.carousel.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/featherlight.css">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/featherlight.gallery.css">
+
+<link rel="icon" content-type="image/png" href="<?php echo get_template_directory_uri(); ?>/favicon.png"/>
+
+<meta name="google-site-verification" content="tbbVNlMcbdWbGAsPEjphvUFbGslSQJ1PSIRd8RYUfUU" />
+<meta name="yandex-verification" content="fef53294090caae9" />
+<meta name='wmail-verification' content='2ea10c18c778323da24a6623cffb5ee5' />
 <?php wp_head(); ?>
 </head>
 
@@ -15,7 +21,7 @@
 	<div class="top-panel">
 		<div class="top-panel__wrapper">
 			<div class="top-panel__item">
-				<a href="home" class="site-logo">
+				<a href="<?php echo get_permalink(get_page_by_title('главная')->ID)?>" class="site-logo">
 					<div class="site-logo__title">Тулрегионохрана</div>
 					<div class="site-logo__subtitle">Частная охранная организация</div>
 				</a>
@@ -28,7 +34,7 @@
 			</div>
 			<div class="top-panel__item">
 				<div class="top-address">
-					<a href="tel:84872524451" class="top-address__tel">8 (487) 252-44-51</a>
+					<a href="tel:84872524451" class="top-address__tel">8 (4872) 52-44-51</a>
 					<div class="top-address__note">Пн-пт с 9.00 до 18.00</div>
 				</div>
 			</div>

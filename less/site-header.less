@@ -121,6 +121,7 @@
 		font-weight: bold;
 		letter-spacing: 1px;
 		position: relative;
+		transition: .3s;
 		&::before {
 			content: '';
 			display: inline-block;
@@ -131,11 +132,17 @@
 			vertical-align: middle;
 		}
 		&:hover {
-			color: @white;
+			color: @yellow;
 		}
 		&:visited {
 			color: @white;
 		}	
+		&:active {
+			color: @yellow;
+		}	
+		&:visited {
+			color: @white;
+		}		
 	}
 	&__note {
 		font-size: 12px;
@@ -184,7 +191,25 @@
 				text-transform: uppercase;
 				text-decoration: none;
 				border: 1px solid @white;	
-				background: @black linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
+				background: @black;
+				position: relative;
+				//transition: .3s;
+				//-webkit-backface-visibility: hidden;
+				//backface-visibility: hidden;
+				&::before {
+					content: '';
+					display: block;
+					width: 100%;
+					height: 50%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.5));
+					opacity: 0.5;
+					//transition: 0.3s;
+					//-webkit-backface-visibility: hidden;
+					//backface-visibility: hidden;
+				}
 				@media @m {
 					margin-top: -1px;
 				}
@@ -193,18 +218,24 @@
 					margin-left: -1px;
 					border-color: @black;
 				}
+				&:hover {
+					color: @yellow;
+					&::before {
+						opacity: 0.8;
+					}
+				}
 			}
 			&:last-child {
 				flex-basis: 208px;
 				a {
 					padding-left: 47px;
-					background-image: url(img/calc.png), linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
+					background-image: url(img/calc.png);
 					background-repeat: no-repeat;
-					background-position: 75px 17px, 0 0;
+					background-position: 75px 17px;
 				}
 				&.current-menu-item {
 					a {
-						background-image: url(img/calc-alt.png), linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
+						background-image: url(img/calc-alt.png);
 					}
 				}
 			}
@@ -212,8 +243,8 @@
 		.current-menu-item {
 			a {
 				border-color: @yellow;
-				background: @yellow linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.25) 50%, transparent 50%);
-				color: @black;
+				background: @yellow;
+				color: @black !important;
 			}
 		}
 	}

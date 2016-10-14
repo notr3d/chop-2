@@ -10,19 +10,9 @@
 				}
 			}
 		}
-		&__item {
-			display: -webkit-flex;
-			display: -moz-flex;
-			display: -ms-flex;
-			display: -o-flex;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;		
-			text-decoration: none;
-			align-items: center;			
+		&__item {			
 			margin-bottom: 16px;
 			position: relative;
-			color: @white;
 			transition: .3s;
 			overflow: hidden;
 			@media @m {
@@ -40,6 +30,12 @@
 					transform: scale(1.1);
 					-webkit-filter: brightness(75%) grayscale(75%);
 				}
+				.services__top {
+					transform: translateY(-100%);
+				}
+				.services__bottom {
+					transform: translateY(-100%);
+				}				
 			}
 		}
 		&__bg {
@@ -63,6 +59,55 @@
 			text-align: center;
 			line-height: 1.1;
 			letter-spacing: 1px;
+			color: @yellow;
+		}
+		&__top {
+			height: 100%;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: .3s;
+		}
+		&__bottom {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: .3s;
+		}
+		&__text {
+			margin-bottom: 5px;
+			color: @yellow;
+		}
+		&__link {
+			display: inline-block;
+			padding: 15px 45px;
+			margin-top: 30px;
+			background: @yellow;
+			color: @black;
+			font-weight: bold;
+			text-transform: uppercase;
+			text-decoration: none;
+			cursor: pointer;
+			transition: .3s;
+			font-size: 16px;
+			&:hover {
+				background: @white;
+			}
 		}
 	}
 
@@ -166,8 +211,7 @@
 		}
 	}
 	&__container {		
-		border: 1px solid @grey;
-		box-shadow: 5px 5px 15px 0 @grey;
+		box-shadow: 5px 5px 30px 0 @grey;
 		@media @t {
 			margin-left: 30px;
 		}
@@ -240,6 +284,7 @@
 			label {
 				color: @grey;
 				cursor: pointer;
+				font-size: 14px;
 			}
 			span {				
 				display: inline-block;

@@ -3,7 +3,7 @@
 	<main class="site-main services">
 		<section class="service">
 			<div class="lcw">
-				<h2 class="section-header">Услуги компании</h2>
+				<h2 class="section-header"><span>Услуги компании</span></h2>
 				<div class="cols">
 					<div class="col-t-6">
 						<a href="property" class="service__item">

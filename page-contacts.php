@@ -42,12 +42,12 @@
 		<section class="contacts__map" id="contacts-map">
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-vOBdjVqwgHav99Lw79O25RL04z5pq2c" type="text/javascript"></script>
 			<script>								
-				var center = new google.maps.LatLng(55.788911, 37.729356);
+				var center = new google.maps.LatLng(54.219374, 37.652526);
 				var init = function(){
 					var prop = {
 						center: center,
 						scrollwheel: false,
-						zoom: 14,						
+						zoom: 15,						
 						mapTypeId: google.maps.MapTypeId.ROADMAP
 					};
 					var map = new google.maps.Map(document.getElementById('contacts-map'), prop);
@@ -71,7 +71,8 @@
 						ov.setMap(this); 
 					};
 					if (window.matchMedia('(min-width: 1100px)').matches) {
-    					map.setCenterWithOffset(center, -200, 0);
+    					map.setCenterWithOffset(center, -155, 0);
+						console.log('1');
     				}					
 				};
 				google.maps.event.addDomListener(window, 'load', init);
